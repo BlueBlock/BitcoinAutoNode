@@ -26,7 +26,7 @@ config=".bitcoin/bitcoin.conf"
 touch $config
 echo "server=1" > $config
 echo "daemon=1" >> $config
-echo "connections=40" >> $config
+echo "maxconnections=40" >> $config
 randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 echo "rpcuser=$randUser" >> $config
